@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über Clash Royale</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Über Clash Royale</h1>
+  </header>
+
+  <nav>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="Karten.html">Karten</a>
+      <a href="Strategien.html">Strategie</a>
+      <a href="Arenen.html">Arenen</a>
+      
+    </nav>
+  </nav>
+
+  <div class="container">
+    <section id="game-info">
+      <h2>Was ist Clash Royale?</h2>
+      <p>Clash Royale ist ein Echtzeit-Strategiespiel von Supercell, das Elemente aus Sammelkartenspielen, Tower Defense und MOBA kombiniert. Spieler treten in 1v1-Kämpfen gegeneinander an, um Türme zu zerstören und Trophäen zu gewinnen.</p>
+    </section>
+
+    <section id="gameplay">
+      <h2>Spielprinzip</h2>
+      <p>Jeder Spieler nutzt ein Deck aus 8 Karten, die während des Spiels strategisch eingesetzt werden müssen. Ziel ist es, die Türme des Gegners zu zerstören, insbesondere den Königsturm – dessen Zerstörung führt zum sofortigen Sieg.</p>
+    </section>
+
+    <section id="cards">
+      <h2>Karten & Decks</h2>
+      <p>Das Spiel bietet über 100 Karten, die in verschiedene Seltenheitsstufen unterteilt sind: Common, Rare, Epic und Legendary. Spieler sammeln und verbessern diese Karten, um ihre Decks zu optimieren und an die Spielweise ihrer Gegner anzupassen.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Clash Royale Präsentation</p>
+  </footer>
+</body>
+<style>
+  :root {
+    --primary-color: #1e90ff;         /* Blau-Ton */
+    --secondary-color: #ffd700;       /* Gold/Ton für Highlights */
+    --bg-dark: #0f0f0f;
+    --bg-light: #1f1f1f;
+    --text-light: #f5f5f5;
+    --text-muted: #aaaaaa;
+    --card-bg: #2a2a2a;
+    --hover-card: #333333;
+    --border-color: #444;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  header {
+    background: url('header-banner.jpg') center/cover no-repeat;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+  }
+  header h1 {
+    position: relative;
+    color: var(--secondary-color);
+    font-size: 4rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+  nav {
+    background-color: var(--bg-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+  }
+  nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    border-radius: 4px;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  section {
+    margin-bottom: 80px;
+  }
+  section h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .intro p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-card);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-body h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  .card-body p {
+    flex-grow: 1;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+  }
+  .card-body a.learn-more {
+    text-decoration: none;
+    color: var(--text-light);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    align-self: flex-start;
+  }
+  .card-body a.learn-more:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+  }
+  footer {
+    background-color: var(--bg-light);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 40px 20px;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 3rem;
+    }
+    nav {
+      flex-wrap: wrap;
+    }
+  }
+
+</style>
+
+</html>
